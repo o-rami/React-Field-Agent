@@ -9,13 +9,13 @@ export async function findAllAgents() {
 };
 
 export async function findAgentById(id) {
-  const reponse = await fetch(`${AGENT_API_URL}/${id}`);
+  const response = await fetch(`${AGENT_API_URL}/${id}`);
+
   if (response.status === 200) {
     return response.json();
   } else {
     return Promise.reject(`Agent with ID#:${id} was not found`);
   }
-
 }
 
 export async function createAgent(agent) {
