@@ -1,50 +1,75 @@
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
-
+const DEFAULT_AGENT = {
+  agentId: 0,
+  firstName: "",
+  middleName: "",
+  lastName: "",
+  dob: "",
+  heightInInches: 1,
+  agencies: [],
+  aliases: []
+}
 
 function AgentForm() {
 
+  const [agent, setAgent] = useState(DEFAULT_AGENT);
 
 
-
-
+  const navigate = useNavigate();
 
   
-  return (<div id="agentFormView" class="container-fluid" style="display:none;">
 
-    <form onsubmit="handleAgentSave(event)">
+  const handleAgentSave = (event) => {
+
+  }
+
+  const handleChange = (event) => {
+
+
+  }
+
+
+
+
+
+  return (<div id="agentFormView" className="container-fluid">
+
+    <form onsubmit={handleAgentSave}>
 
       <h3 id="actionTitle"></h3>
-      <div class="mb-3">
-        <label for="firstName" class="form-label">First Name</label>
-        <input type="text" id="firstName" name="firstName" class="form-control" onchange="handleChange(event)"
+      <div className="mb-3">
+        <label htmlFor="firstName" className="form-label">First Name</label>
+        <input type="text" id="firstName" name="firstName" className="form-control" onChange={handleChange}
           required />
       </div>
 
-      <div class="mb-3">
-        <label for="middleName" class="form-label">Middle Name</label>
-        <input type="text" id="middleName" name="middleName" class="form-control" onchange="handleChange(event)" />
+      <div className="mb-3">
+        <label htmlFor="middleName" className="form-label">Middle Name</label>
+        <input type="text" id="middleName" name="middleName" className="form-control" onChange={handleChange} />
       </div>
 
-      <div class="mb-3">
-        <label for="lastName" class="form-label">Last Name</label>
-        <input type="text" id="lastName" name="lastName" class="form-control" onchange="handleChange(event)"
+      <div className="mb-3">
+        <label htmlFor="lastName" className="form-label">Last Name</label>
+        <input type="text" id="lastName" name="lastName" className="form-control" onChange={handleChange}
           required />
       </div>
 
-      <div class="mb-3">
-        <label for="dob" class="form-label">Date of Birth</label>
-        <input type="date" id="dob" name="dob" class="form-control" onchange="handleChange(event)" />
+      <div className="mb-3">
+        <label htmlFor="dob" className="form-label">Date of Birth</label>
+        <input type="date" id="dob" name="dob" className="form-control" onChange={handleChange} />
       </div>
 
-      <div class="mb-3">
-        <label for="heightInInches" class="form-label">Height (inches)</label>
-        <input type="number" id="heightInInches" name="heightInInches" class="form-control" min="1" max="120"
-          onchange="handleChange(event)" required />
+      <div className="mb-3">
+        <label htmlFor="heightInInches" className="form-label">Height (inches)</label>
+        <input type="number" id="heightInInches" name="heightInInches" className="form-control" min="1" max="120"
+          onChange={handleChange} required />
       </div>
 
-      <div class="mb-3">
-        <button id="saveAgentButton" type="submit" class="btn btn-dark">SAVE</button>
-        <button name="cancelButton" type="button" class="btn btn-secondary" onclick="setView('agentListView')">CANCEL</button>
+      <div className="mb-3">
+        <button id="saveAgentButton" type="submit" className="btn btn-dark">SAVE</button>
+        <button name="cancelButton" type="button" className="btn btn-secondary" onclick="setView('agentListView')">CANCEL</button>
       </div>
 
     </form>
