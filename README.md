@@ -32,24 +32,24 @@
 
 ### Approach (finer details to be added)
 * Create components as needed
+* [x] Import BrowserRouter/Router/Route into App.js 
+  * [ ] Revamp App by routing to each path/element
+	* Home/Agents/Add-Agent/Edit-Agent/Delete-Agent/Not-Found
+* [x] Create Error/NotFound Components
+  * [x] Wildcard \* for not found 
 * [x] Create Separate AgentAPI Service Component
   * [x] URL constant, helper function for init creation (DRY)
-  * [ ] Implement findAll fetch
+  * [x] Implement findAll fetch
     * [ ] Plug into `<AgentList/>` component
-* [ ] Implement findById
-* [ ] Implement add
+* [x] Implement findById
+* [x] Implement add
   * [ ] Plug into `<Header/>`, `<Link>`
-* [ ] Implement update
+* [x] Implement update
     * [ ] Plug into `<AgentList/>` component
-* [ ] Implement delete
+* [x] Implement delete
     * [ ] Plug into `<AgentList/>` component
 * [ ] useState/useParams/useNavigate In form to grab parameters, use state, and redirect appropriately
   * [ ] Double back and reimplement buttons with `<Link to=""></Link>
-* [ ] Create Error/NotFound Components
-  * Wildcard \* for not found 
-* [ ] Import BrowserRouter/Router/Route into App.js 
-  * [ ] Revamp App by routing to each path/element
-	* Home/Agents/Add-Agent/Edit-Agent/Delete-Agent/Not-Found
 
 ### Stretch Goals
 * Add client-side routes and placeholder components for all of the top-level sections of the application.
