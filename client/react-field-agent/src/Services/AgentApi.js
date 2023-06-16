@@ -1,4 +1,4 @@
-const AGENT_API_URL = 'http://localhost:8080/api/agent';
+export const AGENT_API_URL = 'http://localhost:8080/api/agent';
 
 export async function findAllAgents() {
   const response = await fetch(AGENT_API_URL);
@@ -54,7 +54,7 @@ export async function deleteAgentById(id) {
   }
 };
 
-function makeAgentInit(method, agent) {
+export function makeAgentInit(method, agent) {
   return {
     method: method,
     headers: {
