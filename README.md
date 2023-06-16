@@ -55,4 +55,5 @@
 * Add client-side routes and placeholder components for all of the top-level sections of the application.
 * Add an alias CRUD UI.
 * Add an agency CRUD UI.
-* Show and edit relationships between agents and agencies.
+* Show and edit relationships between agents and agencies.\
+* Brush the dust off of photoshop, and render a custom agent icon (512^, 192^)
