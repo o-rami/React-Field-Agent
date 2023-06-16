@@ -30,7 +30,7 @@
 * Optionally, a component to delete an agent (it's okay to handle delete from the list component).
 
 ### Technical Requirements
-* Use Create React App.
+Use Create React App.
 * Use fetch for async HTTP.
 * Use React Router to implement the client-side routes.
 * Use React Router's `navigate` hook to programmatically redirect users and `useParams` hook to access parameters, paths, and other data.
