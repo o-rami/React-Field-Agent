@@ -32,8 +32,8 @@
 
 ### Approach (finer details to be added)
 * Create components as needed
-* [ ] Create Separate AgentAPI Service Component
-  * [ ] URL constant, helper function for init creation (DRY)
+* [x] Create Separate AgentAPI Service Component
+  * [x] URL constant, helper function for init creation (DRY)
   * [ ] Implement findAll fetch
     * [ ] Plug into `<AgentList/>` component
 * [ ] Implement findById
