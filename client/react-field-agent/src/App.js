@@ -1,29 +1,16 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import NotFound from "./Components/NotFound";
+import Header from "./Components/Header";
 import AgentList from "./Components/AgentList";
-import AgentForm from "./Components/AgentForm";
-
-
-
-
-
-
 
 function App() {
   return (
     <Router>
-      <NavBar />
+      <Header />
       <Routes>
         <Route
-          path="/about"
-          element={<About />} />
-        <Route
           path="/"
-          element={<Home />} />
-        <Route
-          path="/agents"
           element={<AgentList />} />
-        <Route
+        {/* <Route
           path="/agents/edit/:id"
           element={<AgentForm />} />
         <Route
@@ -32,7 +19,7 @@ function App() {
           <Route
           path="/*"
           element={<NotFound />} />
-        <Footer />
+        <Footer /> */}
       </Routes>
     </Router>
   );

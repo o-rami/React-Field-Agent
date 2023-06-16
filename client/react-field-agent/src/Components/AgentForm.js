@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { AGENT_API_URL, createAgent, updateAgent, deleteAgentById, makeAgentInit } from "../Services/agentApi";
 
 const DEFAULT_AGENT = {
   agentId: 0,
@@ -35,8 +36,8 @@ function AgentForm() {
     const updatedAgent = { ...agent };
 
     if (updatedAgent.agentId === 0) {
-      const init = AgentApi.makeAgentInit('POST', updatedAgent);
-      fetch(AgentApi.AGENT_API_URL, init)
+      const init = makeAgentInit('POST', updatedAgent);
+      fetch(AGENT_API_URL, init)
         .then(response => {
           if (response.status !== 201) {
             return Promise.reject("response is not 200 OK");
@@ -44,10 +45,10 @@ function AgentForm() {
           return response.json();
         })
         .then(data => {
-          navigate("/confirmation");
+          navigate("/confirmation", { state: { msg: "GOOD" } });
         })
         .catch(() => {
-          navigate("/error");
+          navigate("/error", { state: { msg: "BAD" } });
         });
     };
 

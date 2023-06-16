@@ -40,7 +40,7 @@
 * [x] Create Separate AgentAPI Service Component
   * [x] URL constant, helper function for init creation (DRY)
   * [x] Implement findAll fetch
-    * [ ] Plug into `<AgentList/>` component
+    * [x] Plug into `<AgentList/>` component
 * [x] Implement findById
 * [x] Implement add
   * [ ] Plug into `<Header/>`, `<Link>`

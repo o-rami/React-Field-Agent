@@ -1,21 +1,41 @@
+import { Link } from "react-router-dom";
 
 function Header() {
+
   return (<header>
-    <div>
-      <nav id="navbar" class="navbar navbar-expand navbar-dark bg-dark" >
-        <div class="navbar-nav">
-          <a class="nav-link disabled">Agencies</a>
-          <a class="nav-link disabled">Locations</a>
-          <a class="nav-link active" href="#">Agents</a>
-          <a class="nav-link disabled">Aliases</a>
-          <a class="nav-link disabled">Missions</a>
-        </div>
-      </nav>
+    <nav className="navbar navbar-dark navbar-expand-md bg-dark" >
+      <Link to="/" className="navbar-brand">Field Agent</Link>
+      <div className="navbar-nav">
+        <ul className="navbar-nav">
+          <li>
+            <Link to="/" className="nav-item nav-link">Home</Link>
+          </li>
+          <li>
+            <Link to="/about" className="nav-item nav-link">About</Link>
+          </li>
+          <li>
+            <Link to="/agencies" className="nav-item nav-link">Agencies</Link>
+          </li>
+          <li>
+            <Link to="/locations" className="nav-item nav-link">Locations</Link>
+          </li>
+          <li>
+            <Link to="/" className="nav-item nav-link">Agents</Link>
+          </li>
+          <li>
+            <Link to="/" className="nav-item nav-link">Aliases</Link>
+          </li>
+          <li>
+            <Link to="/missions" className="nav-item nav-link">Missions</Link>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div className="container-fluid">
+      <Link to="/add" type="button" id="addButton" className="btn btn-dark btn-md btn-nav" style={{ marginTop: '1em' }} >ADD AGENT</Link>
     </div>
-    <div class="container-fluid" style="margin-top:1rem;">
-      <button type="button" id="addAgentButton" class="btn btn-dark" onclick="handleAdd()">ADD NEW AGENT</button>
-    </div>
-  </header>)
+  </header>
+  );
 }
 
 export default Header;

@@ -16,7 +16,7 @@ export async function findAgentById(id) {
   } else {
     return Promise.reject(`Agent with ID#:${id} was not found`);
   }
-}
+};
 
 export async function createAgent(agent) {
   const init = makeAgentInit('POST', agent);
@@ -28,7 +28,7 @@ export async function createAgent(agent) {
     return Promise.reject(errors);
   }
   return response.json();
-}
+};
 
 export async function updateAgent(agent) {
   const init = makeAgentInit('PUT', agent);
@@ -43,7 +43,7 @@ export async function updateAgent(agent) {
     const errors = await response.json();
     return Promise.reject(errors);
   }
-}
+};
 
 export async function deleteAgentById(id) {
 
@@ -63,4 +63,4 @@ export function makeAgentInit(method, agent) {
     },
     body: JSON.stringify(agent)
   };
-}
+};
