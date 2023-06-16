@@ -23,12 +23,6 @@
   * "Delete Agent" /agents/delete/:id (optional) - Renders a component that displays a confirmation message to delete the agent specified by the :id route parameter
   * "Not Found" - Renders a component that displays a friendly "not found" message if the requested route doesn't match one of the defined routes
 
-### Create new components as needed to support the above routes:
-* Component to display all agents
-* Component to add an agent
-* Component to update an agent
-* Optionally, a component to delete an agent (it's okay to handle delete from the list component).
-
 ### Technical Requirements
 * Use Create React App.
 * Use fetch for async HTTP.
@@ -37,13 +31,22 @@
 * Use a CSS framework.
 
 ### Approach (finer details to be added)
+* Create components as needed
 * [ ] Create Separate AgentAPI Service Component
+  * [ ] URL constant, helper function for init creation (DRY)
   * [ ] Implement findAll fetch
-    * [ ] Plug into list component
-* [ ] Implement findById/add/update/delete
-  * [ ] Plug into form with the help of useState/useParams/useNavigate
-* [ ] Double back and reimplement buttons with `<Link to=""></Link>
+    * [ ] Plug into `<AgentList/>` component
+* [ ] Implement findById
+* [ ] Implement add
+  * [ ] Plug into `<Header/>`, `<Link>`
+* [ ] Implement update
+    * [ ] Plug into `<AgentList/>` component
+* [ ] Implement delete
+    * [ ] Plug into `<AgentList/>` component
+* [ ] useState/useParams/useNavigate In form to grab parameters, use state, and redirect appropriately
+  * [ ] Double back and reimplement buttons with `<Link to=""></Link>
 * [ ] Create Error/NotFound Components
+  * Wildcard \* for not found 
 * [ ] Import BrowserRouter/Router/Route into App.js 
   * [ ] Revamp App by routing to each path/element
 	* Home/Agents/Add-Agent/Edit-Agent/Delete-Agent/Not-Found
