@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./Components/Header";
 import AgentList from "./Components/AgentList";
+import AgentForm from "./Components/AgentForm";
 
 function App() {
   return (
@@ -10,6 +11,9 @@ function App() {
         <Route
           path="/"
           element={<AgentList />} />
+          <Route
+          path="/add"
+          element={<AgentForm />} />
         {/* <Route
           path="/agents/edit/:id"
           element={<AgentForm />} />
