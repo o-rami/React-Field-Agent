@@ -1,32 +1,51 @@
-import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { AGENT_API_URL, createAgent, updateAgent, deleteAgentById, makeAgentInit } from "../Services/agentApi";
+import { useState, useEffect } from "react";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import { AGENT_API_URL, createAgent, updateAgent, makeAgentInit, findAgentById } from "../Services/agentApi";
 
 const DEFAULT_AGENT = {
   agentId: 0,
-  firstName: "",
-  middleName: "",
-  lastName: "",
-  dob: "",
+  firstName: '',
+  middleName: '',
+  lastName: '',
+  dob: '',
   heightInInches: 1,
   agencies: [],
-  aliases: []
+  aliases: [],
 }
 
 function AgentForm() {
 
   const [agent, setAgent] = useState(DEFAULT_AGENT);
+  const [errors, setErrors] = useState([]);
+
+  const { id } = useParams();
 
   const navigate = useNavigate();
 
-  const handleChange = (event) => {
-    const updatedAgent = { ...agent };
-    if (event.target.type === 'number') {
-      // handle NaN
+  useEffect(() => {
+    if (id) {
+      findAgentById(id)
+        .then(data => setAgent(data))
+        .catch(error => {
+          navigate("/error", {
+            state: { msg: error }
+          });
+        });
     } else {
-      updatedAgent[event.target.name] = event.target.value;
+      setAgent(DEFAULT_AGENT);
     }
-    setAgent(updatedAgent);
+  }, [id, navigate]);
+
+  const handleChange = (event) => {
+    const nextAgent = { ...agent };
+    if (event.target.type === 'number') {
+      let nextValue = parseFloat(nextValue, 10);
+      if (isNaN(nextValue)) {
+        nextValue = event.target.value;
+      }
+    }
+    nextAgent[event.target.name] = event.target.value;
+    setAgent(nextAgent);
   }
 
 
@@ -52,7 +71,7 @@ function AgentForm() {
         });
     };
 
-    return (
+    return (<div className="container-fluid">
       <form onsubmit={handleAgentSave}>
 
         <h3 id="actionTitle"></h3>
@@ -85,11 +104,13 @@ function AgentForm() {
         </div>
 
         <div className="mb-3">
-          <button id="saveAgentButton" type="submit" className="btn btn-dark">SAVE</button>
-          <button name="cancelButton" type="button" className="btn btn-secondary" onclick="setView('agentListView')">CANCEL</button>
+          <button type="submit" id="saveAgentButton" className="btn btn-dark">SAVE</button>
+          <Link to="/" type="button" name="cancelButton" className="btn btn-secondary" onclick="setView('agentListView')">CANCEL</Link>
         </div>
 
       </form>
+      <errors errors={errors} />
+      </div>
     );
   }
 }

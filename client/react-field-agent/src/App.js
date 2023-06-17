@@ -9,7 +9,7 @@ function App() {
       <Header />
       <Routes>
         <Route
-          path="/"
+          path="/agents"
           element={<AgentList />} />
           <Route
           path="/add"
