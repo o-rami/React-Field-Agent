@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Components/Home";
 import Header from "./Components/Header";
-import AgentList from "./Components/AgentList";
-import AgentForm from "./Components/AgentForm";
+import AgentList from "./Components/Agent/AgentList";
+import AgentForm from "./Components/Agent/AgentForm";
 import ConfirmDeleteAgent from "./Components/ConfirmDeleteAgent";
-import NotFound from "./Pages/NotFound";
+import NotFound from "./NotFound";
 import Footer from "./Components/Footer";
 
 function App() {
@@ -13,13 +13,13 @@ function App() {
       <Header />
       <Routes>
         <Route
-          path="/home"
+          path="/"
           element={<Home />} />
         <Route
           path="/agents"
           element={<AgentList />} />
         <Route
-          path="/add"
+          path="/agents/add"
           element={<AgentForm />} />
         <Route
           path="/agents/edit/:id"

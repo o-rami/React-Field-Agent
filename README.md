@@ -36,21 +36,19 @@
   * [ ] Revamp App by routing to each path/element
 	* Home/Agents/Add-Agent/Edit-Agent/Delete-Agent/Not-Found
 * [x] Create Error/NotFound Components
-  * [x] Wildcard \* for not found 
+  * [x] Wildcard * for not found 
 * [x] Create Separate AgentAPI Service Component
   * [x] URL constant, helper function for init creation (DRY)
   * [x] Implement findAll fetch
     * [x] Plug into `<AgentList/>` component
 * [x] Implement findById
 * [x] Implement add
-  * [ ] Plug into `<Header/>`, `<Link>`
-* [x] Implement update
-    * [ ] Plug into `<AgentList/>` component
+  * [x] Plug into `<AgentList/>`, `<Link>`
+  * Decided to add to table, since an add agent button on the header might not work with future CRUD additions
+* [x] Implement update/edit
+    * [x] Plug into `<AgentList/>` component
 * [x] Implement delete
     * [ ] Plug into `<AgentList/>` component
-* [ ] useState/useParams/useNavigate In form to grab parameters, use state, and redirect appropriately
-  * [ ] Double back and reimplement buttons with `<Link to=""></Link>
-
 ### Stretch Goals
 * Add client-side routes and placeholder components for all of the top-level sections of the application.
 * Add an alias CRUD UI.

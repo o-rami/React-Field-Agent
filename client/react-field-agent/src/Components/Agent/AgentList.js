@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 
-import { findAllAgents } from "../Services/agentApi";
+import { findAllAgents } from "../../Services/agentApi";
 
 function AgentList() {
 
@@ -29,7 +29,7 @@ function AgentList() {
           <th scope="col" className="table-dark">Last Name</th>
           <th scope="col" className="table-dark">Height (Inches)</th>
           <th scope="col" className="table-dark">
-            <Link className="btn btn-light btn-sm" to="/add">ADD AGENT</Link>
+            <Link className="btn btn-light btn-sm" to="/agents/add">ADD AGENT</Link>
           </th>
         </tr>
       </thead>
@@ -42,21 +42,18 @@ function AgentList() {
               <td>{a.lastName}</td>
               <td>{a.heightInInches}</td>
               <td>
-                <Link to={`/edit/${a.id}`} type="button" className="btn btn-primary btn-sm">EDIT</Link>
-                <Link to={`/delete/${a.id}`} type="button" className="btn btn-danger btn-sm">DELETE</Link>
+                <Link to={`/agents/edit/${a.agentId}`} className="btn btn-primary btn-sm">UPDATE</Link>
+                <Link to={`/agents/delete/${a.agentId}`} className="btn btn-danger btn-sm">DELETE</Link>
               </td>
             </tr>)
-          : <tr>
-            <td colSpan={5}>
-              No Agents
-            </td>
-          </tr>}
+          : <tr><td colSpan={5}>No Agents</td></tr>}
       </tbody>
     </table>
     <div >
-      {location.state && <div className="alert alert-info">
-        {location.state.message}
-      </div>}
+      {location.state
+        && <div className="alert alert-success">
+          {location.state.msg}
+        </div>}
     </div>
   </>)
 }
