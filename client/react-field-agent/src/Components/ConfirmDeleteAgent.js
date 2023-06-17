@@ -1,5 +1,5 @@
 
-function DeleteAgent() {
+function ConfirmDeleteAgent() {
   return (<div id="agentDeleteView" class="container-fluid" style="display:none;">
     <div class="row">
       <div class="col">
@@ -26,4 +26,4 @@ function DeleteAgent() {
 }
 
 
-export default DeleteAgent;
+export default ConfirmDeleteAgent;

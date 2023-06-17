@@ -17,7 +17,7 @@ function AgentList() {
   }, []);
 
   return (<>
-  <div className="container-fluid">
+    <div className="container-fluid">
       <h2>Agents</h2>
     </div>
     <table className="table table-striped table-hover">
@@ -28,13 +28,15 @@ function AgentList() {
           <th scope="col" className="table-dark">First Name</th>
           <th scope="col" className="table-dark">Last Name</th>
           <th scope="col" className="table-dark">Height (Inches)</th>
-          <th className="table-dark"></th>
+          <th scope="col" className="table-dark">
+            <Link className="btn btn-light btn-sm" to="/add">ADD AGENT</Link>
+          </th>
         </tr>
       </thead>
       <tbody className="table-group-divider">
         {agents.length > 0
           ? agents.map(a =>
-            <tr>
+            <tr key={a.agentId}>
               <th scope="row">{a.agentId}</th>
               <td>{a.firstName}</td>
               <td>{a.lastName}</td>
@@ -44,14 +46,18 @@ function AgentList() {
                 <Link to={`/delete/${a.id}`} type="button" className="btn btn-danger btn-sm">DELETE</Link>
               </td>
             </tr>)
-          : <div className="col-sm-6 col-lg-4">No Agents</div>}
-        <div >
-            {location.state && <div className="alert alert-info">
-              {location.state.message}
-            </div>}
-        </div>
+          : <tr>
+            <td colSpan={5}>
+              No Agents
+            </td>
+          </tr>}
       </tbody>
     </table>
+    <div >
+      {location.state && <div className="alert alert-info">
+        {location.state.message}
+      </div>}
+    </div>
   </>)
 }
 

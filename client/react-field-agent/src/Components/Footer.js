@@ -1,11 +1,10 @@
 
 function Footer() {
   return (<footer>
-    <div className="container-fluid" id="footer">
-      <p>Ramirez | Assessment 8</p>
+    <div className="footer">
+      <p>Ramirez | Assessment 9</p>
     </div>
   </footer>)
-
 }
 
 
