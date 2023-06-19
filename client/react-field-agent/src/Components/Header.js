@@ -6,6 +6,7 @@ function Header() {
 
     <nav id="navbar" className="navbar navbar-expand-sm navbar-dark bg-dark" >
       <Link to="/" className="navbar-brand col-4">
+        <img src="/logo512.png" width="40"/>
         React Field Agent</Link>
       <div className="navbar-nav">
         <Link className="nav-link nav-item" to="/">Home</Link>

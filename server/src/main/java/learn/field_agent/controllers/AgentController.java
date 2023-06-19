@@ -26,8 +26,12 @@ public class AgentController {
     }
 
     @GetMapping("/{agentId}")
-    public Agent findById(@PathVariable int agentId) {
-        return service.findById(agentId);
+    public ResponseEntity<Agent> findById(@PathVariable int agentId) {
+        Agent agent = agencyService.findById(agentId);
+        if (agent == null) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+        return ResponseEntity.ok(agent);
     }
 
     @PostMapping
