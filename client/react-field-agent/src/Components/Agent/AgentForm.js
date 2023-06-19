@@ -96,7 +96,7 @@ function AgentForm() {
 
       <div className="mb-3">
         <label htmlFor="lastName" className="form-label">Last Name</label>
-        <input type="text" id="lastName" name="lastName" className="form-control" value={agent.firstName} onChange={handleChange}
+        <input type="text" id="lastName" name="lastName" className="form-control" value={agent.lastName} onChange={handleChange}
           required />
       </div>
 

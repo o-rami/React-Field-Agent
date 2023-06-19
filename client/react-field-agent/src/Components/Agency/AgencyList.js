@@ -20,7 +20,7 @@ function AgencyList() {
     <div className="container-fluid">
       <h2>Agencies</h2>
     </div>
-    <table className="table table-striped table-hover">
+    <table className="table table-hover">
       <caption>List of agencies</caption>
       <thead className="thead-dark">
         <tr>

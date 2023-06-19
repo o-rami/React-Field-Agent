@@ -81,14 +81,14 @@ function AgencyForm() {
     <form onSubmit={handleSaveAgency}>
       <h2>Agency Form</h2>
       <div className="mb-3">
-        <label htmlFor="firstName" className="form-label">Short Name</label>
-        <input type="text" id="firstName" name="firstName" className="form-control" value={agency.firstName} onChange={handleChange}
+        <label htmlFor="shortName" className="form-label">Short Name</label>
+        <input type="text" id="shortName" name="shortName" className="form-control" value={agency.shortName} onChange={handleChange}
           required />
       </div>
 
       <div className="mb-3">
-        <label htmlFor="middleName" className="form-label">Long Name</label>
-        <input type="text" id="middleName" name="middleName" className="form-control" value={agency.middleName} onChange={handleChange} />
+        <label htmlFor="longName" className="form-label">Long Name</label>
+        <input type="text" id="longName" name="longName" className="form-control" value={agency.longName} onChange={handleChange} required/>
       </div>
 
       <div className="mb-3">
