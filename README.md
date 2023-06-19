@@ -32,6 +32,7 @@
 
 ### Approach (finer details to be added)
 * Create components as needed
+
 * [x] Import BrowserRouter/Router/Route into App.js 
   * [x] Revamp App by routing to each path/element
 	* Home/Agents/Add-Agent/Edit-Agent/Delete-Agent/Not-Found
@@ -40,7 +41,6 @@
 * [x] Create Separate AgentAPI Service Component
   * [x] URL constant, helper function for init creation (DRY)
   * [x] Implement findAll fetch
-    * [x] Plug into `<AgentList/>` component
 * [x] Implement findById
 * [x] Implement add
   * [x] Plug into `<AgentList/>`, `<Link>`
@@ -53,5 +53,3 @@
 * Add client-side routes and placeholder components for all of the top-level sections of the application.
 * Add an alias CRUD UI.
 * [x] Add an agency CRUD UI.
-* Show and edit relationships between agents and agencies.\
-* [x] Brush the dust off of photoshop, and render a custom agent icon (512^, 192^)
