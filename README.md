@@ -33,7 +33,7 @@
 ### Approach (finer details to be added)
 * Create components as needed
 * [x] Import BrowserRouter/Router/Route into App.js 
-  * [ ] Revamp App by routing to each path/element
+  * [x] Revamp App by routing to each path/element
 	* Home/Agents/Add-Agent/Edit-Agent/Delete-Agent/Not-Found
 * [x] Create Error/NotFound Components
   * [x] Wildcard * for not found 
@@ -48,10 +48,10 @@
 * [x] Implement update/edit
     * [x] Plug into `<AgentList/>` component
 * [x] Implement delete
-    * [ ] Plug into `<AgentList/>` component
+    * [x] Plug into `<AgentList/>` component
 ### Stretch Goals
 * Add client-side routes and placeholder components for all of the top-level sections of the application.
 * Add an alias CRUD UI.
-* Add an agency CRUD UI.
+* [x] Add an agency CRUD UI.
 * Show and edit relationships between agents and agencies.\
-* Brush the dust off of photoshop, and render a custom agent icon (512^, 192^)
+* [x] Brush the dust off of photoshop, and render a custom agent icon (512^, 192^)
