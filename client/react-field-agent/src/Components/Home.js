@@ -3,14 +3,12 @@ function Home() {
   return <div>
 
     <div className="row">
-    <div className="col-2">
-      </div>
-      <div className="col-4">
-    <h2>Assessment 9: Home</h2>
-        <img width="500px" src="https://cdn.pixabay.com/photo/2017/04/24/13/37/architecture-2256489_1280.jpg" alt="Second slide" />
+      <div className="col-sm">
+        <h2>Assessment 9: Home</h2>
+        <img width="500" src="https://cdn.pixabay.com/photo/2017/04/24/13/37/architecture-2256489_1280.jpg" alt="Second slide" />
       </div>
 
-      <div className="col-4">
+      <div className="col-sm">
         <p>
           Lorem ipsum dolor sit amet. Id voluptas labore qui eligendi distinctio quo maiores autem aut odit
           repellat 33 nihil ipsum et itaque tempore et ipsam sunt? Ut nesciunt quibusdam qui laborum officia
