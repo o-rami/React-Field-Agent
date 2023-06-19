@@ -27,7 +27,7 @@ public class AgentController {
 
     @GetMapping("/{agentId}")
     public ResponseEntity<Agent> findById(@PathVariable int agentId) {
-        Agent agent = agencyService.findById(agentId);
+        Agent agent = service.findById(agentId);
         if (agent == null) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
