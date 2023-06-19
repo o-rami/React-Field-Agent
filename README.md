@@ -32,27 +32,24 @@
 
 ### Approach (finer details to be added)
 * Create components as needed
-* [x] Create Separate AgentAPI Service Component
-  * [x] URL constant, helper function for init creation (DRY)
-  * [x] Implement findAll fetch
-    * [x] Plug into `<AgentList/>` component
-* [x] Implement findById
-* [x] Implement add
-  * [x] Plug into `<Header/>`, `<Link>`
-* [x] Implement update
-    * [x] Plug into `<AgentList/>` component
-* [x] Implement delete
-    * [x] Plug into `<AgentList/>` component
-* [x] useState/useParams/useNavigate In form to grab parameters, use state, and redirect appropriately
-  * [x] Double back and reimplement buttons with `<Link to=""></Link>
-* [x] Create Error/NotFound Components
-  * Wildcard \* for not found 
+
 * [x] Import BrowserRouter/Router/Route into App.js 
   * [x] Revamp App by routing to each path/element
 	* Home/Agents/Add-Agent/Edit-Agent/Delete-Agent/Not-Found
-
+* [x] Create Error/NotFound Components
+  * [x] Wildcard * for not found 
+* [x] Create Separate AgentAPI Service Component
+  * [x] URL constant, helper function for init creation (DRY)
+  * [x] Implement findAll fetch
+* [x] Implement findById
+* [x] Implement add
+  * [x] Plug into `<AgentList/>`, `<Link>`
+  * Decided to add to table, since an add agent button on the header might not work with future CRUD additions
+* [x] Implement update/edit
+    * [x] Plug into `<AgentList/>` component
+* [x] Implement delete
+    * [x] Plug into `<AgentList/>` component
 ### Stretch Goals
 * Add client-side routes and placeholder components for all of the top-level sections of the application.
 * Add an alias CRUD UI.
 * [x] Add an agency CRUD UI.
-* Show and edit relationships between agents and agencies.
