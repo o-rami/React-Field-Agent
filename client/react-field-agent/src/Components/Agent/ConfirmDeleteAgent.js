@@ -1,4 +1,4 @@
-import { deleteAgentById, findAgentById } from "../Services/agentApi";
+import { deleteAgentById, findAgentById } from "../../Services/agentApi";
 import { useState, useEffect } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
