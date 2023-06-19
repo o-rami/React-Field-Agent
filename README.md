@@ -32,27 +32,27 @@
 
 ### Approach (finer details to be added)
 * Create components as needed
-* [ ] Create Separate AgentAPI Service Component
-  * [ ] URL constant, helper function for init creation (DRY)
-  * [ ] Implement findAll fetch
-    * [ ] Plug into `<AgentList/>` component
-* [ ] Implement findById
-* [ ] Implement add
-  * [ ] Plug into `<Header/>`, `<Link>`
-* [ ] Implement update
-    * [ ] Plug into `<AgentList/>` component
-* [ ] Implement delete
-    * [ ] Plug into `<AgentList/>` component
-* [ ] useState/useParams/useNavigate In form to grab parameters, use state, and redirect appropriately
-  * [ ] Double back and reimplement buttons with `<Link to=""></Link>
-* [ ] Create Error/NotFound Components
+* [x] Create Separate AgentAPI Service Component
+  * [x] URL constant, helper function for init creation (DRY)
+  * [x] Implement findAll fetch
+    * [x] Plug into `<AgentList/>` component
+* [x] Implement findById
+* [x] Implement add
+  * [x] Plug into `<Header/>`, `<Link>`
+* [x] Implement update
+    * [x] Plug into `<AgentList/>` component
+* [x] Implement delete
+    * [x] Plug into `<AgentList/>` component
+* [x] useState/useParams/useNavigate In form to grab parameters, use state, and redirect appropriately
+  * [x] Double back and reimplement buttons with `<Link to=""></Link>
+* [x] Create Error/NotFound Components
   * Wildcard \* for not found 
-* [ ] Import BrowserRouter/Router/Route into App.js 
-  * [ ] Revamp App by routing to each path/element
+* [x] Import BrowserRouter/Router/Route into App.js 
+  * [x] Revamp App by routing to each path/element
 	* Home/Agents/Add-Agent/Edit-Agent/Delete-Agent/Not-Found
 
 ### Stretch Goals
 * Add client-side routes and placeholder components for all of the top-level sections of the application.
 * Add an alias CRUD UI.
-* Add an agency CRUD UI.
+* [x] Add an agency CRUD UI.
 * Show and edit relationships between agents and agencies.
