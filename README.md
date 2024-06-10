@@ -1,4 +1,4 @@
-# Assessment 9: React Field Agent
+React Field Agent
 
 ## Goal
 * Start a React front-end for the Field Agent HTTP service.
